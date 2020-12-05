@@ -25,7 +25,7 @@ tidy_data <- austen_books() %>%
   ungroup() %>%
   unnest_tokens(word, text)
 
-# We will now make use of the “bing” lexicon to and implement filter() over the words that correspond to joy
+# Making use of the “bing” lexicon to and implement filter() over the words that correspond to joy
 # We will use the book "Sense and Sensibility" and derive its words to implement out sentiment analysis model
 positive_senti <- get_sentiments("bing") %>%
   filter(sentiment == "positive")
